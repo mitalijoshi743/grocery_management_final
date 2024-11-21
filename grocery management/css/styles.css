@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+:root {
+    --green: green;
+    --black: black;
+    --lilac: #AA98A9;
+    --lgreens: #38cb82 ;
+    --light-color: #666;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Fixed missing value */
+    --border: 0.4rem solid rgba(0, 0, 0, 0.1); /* Fixed the value */
+    --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+    border: 10px  ;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear; /* Added space after 'all' */
+}
+
+html {
+    font-size: 80%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body {
+    background: #C3B1E1;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    height: 500px;
+    background-image: url('passionfruit-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    color: #fff;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+}
+
+.hero-content p {
+    font-size: 20px;
+}
+
+.btn {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* Add more CSS rules as needed */
+header {
+  border: 2px solid black;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: aliceblue;
+    box-shadow: var(--black);
+    border: var(--border); /* Adds border */
+    text-align: center;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    flex-grow: 1;
+    text-align: center; /* Centers the logo text */
+}
+
+.header .navbar {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 2;
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    margin: 1.2rem;
+    color: var(--black);
+}
+
+.header .navbar a:hover {
+
+    color: var(--lilac);
+}
+
+
+/* Add border to the product boxes */
+.product {
+    background-color: #fff;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Darker black with 80% opacity */
+    width: 30%;
+    min-width: 250px;
+    border: 1px solid var(--black); /* Adds border to product box */
+    text-align: center; /* Center-aligns the text inside the product boxes */
+}
+
+/* For centering text in the body section */
+section {
+    padding: 50px 20px;
+    text-align: center; /* Centers text horizontally */
+}
+
+.header .icons div
+{
+   border: 1px solid;
+   height: 4.5rem;
+   width: 4.5rem;
+   line-height: 4.5rem;
+   border-radius:  .5rem;
+   background: aliceblue;
+   color: var(--black);
+   font-size: 1rem;
+   margin-right: .3rem;
+   text-align: center;
+   cursor: pointer;
+
+}
+
+.header .icons div:hover
+{
+    background: var(--lgreens);
+    color: white;
+}
+#menu-btn
+{
+    display: none;
+}
+
+.header .search-form
+{
+    border: 4px solid;
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 50rem;
+    height: 5rem;
+    background: #fff;
+    border-radius: .5rem;
+    overflow:hidden ;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+
+}
+
+.header .search-form.active
+{
+    right: 2rem;
+    transition: .4s linear ;
+}
+.header .search-form input
+{
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding:0 10rem;
+}
+
+.header .search-form label
+{
+    font-size: 2.2 rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header .search-form label:hover
+{
+    color: var(--lgreens);
+}
+
+.features {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.feature-card {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 300px;
+    text-align: center;
+}
+
+.feature-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    margin-bottom: 10px;
+}
+
+.feature-card a {
+    text-decoration: none;
+    color: #007bff;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f5f5f5;
+}
+
+.banner {
+    position: relative;
+    height: 300px; /* Adjust the height as needed */
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.products {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.product-card {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 300px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    margin-bottom: 10px;
+}
+
+.rating {
+    margin-bottom: 10px;
+}
+
+.rating i {
+    color: #ff9933; /* Indian orange color */
+}
+
+.add-to-cart {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-section {
+    text-align: center;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons li {
+    margin: 0 5px;
+}
+
+.social-icons li a {
+    font-size: 20px;
+    color: #333;
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.payment-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 0px;
+}
+dropdown {
+            position: absolute;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            width: 160px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 0px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .header.dropdown div
+        {
+   border: 1px solid;
+   height: 4.5rem;
+   width: 4.5rem;
+   line-height: 4.5rem;
+   border-radius:  .5rem;
+   background: aliceblue;
+   color: var(--black);
+   font-size: 1rem;
+   margin-right: .3rem;
+   text-align: center;
+   cursor: pointer;
+
+}
+
+.header.dropdown div:hover
+{
+    background: var(--lgreens);
+    color: white;
+}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+.reviews {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.review-card {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+
+.review-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.review-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.review-card p {
+    margin-bottom: 10px;
+}
+
+
+.blogs {
+    text-align: center;
+    padding: 150px;
+}
+
+.blog-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 400px;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.blog-info {
+    text-align: left;
+    margin-top: 10px;
+}
